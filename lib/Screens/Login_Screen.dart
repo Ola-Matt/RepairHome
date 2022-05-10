@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.all(24.0),
           child: SingleChildScrollView(
@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
                 Text(
                   'Login to your account',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black87,
                     fontWeight: FontWeight.bold,
                     fontSize: 34,
                   ),
@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.black87
                     ),
-                    decoration: InputDecoration(
+                    decoration: InputDecoration( fillColor: Colors.grey, filled: true,
                         border: InputBorder.none,
                         contentPadding: EdgeInsets.only(top: 14),
                         prefixIcon: Icon(
@@ -53,10 +53,10 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
+               const SizedBox(
+                height: 20,
                 ),
-                Container(
+                /*Container(
                   color: Colors.white,
                   padding: EdgeInsets.all(8),
                   child: TextField(
@@ -78,8 +78,8 @@ class LoginScreen extends StatelessWidget {
                     ),
 
                   ),
-                ),
-                const SizedBox(
+                ),*/
+               const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -91,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                         color: Colors.black87
                     ),
                     obscureText: true,
-                    decoration: InputDecoration(
+                    decoration: InputDecoration( fillColor: Colors.grey, filled: true,
                         border: InputBorder.none,
                         contentPadding: EdgeInsets.only(top: 14),
                         prefixIcon: Icon(
@@ -114,14 +114,15 @@ class LoginScreen extends StatelessWidget {
                       child: ElevatedButton(
                         onPressed: () {},
                         child: Text(
-                          "Login",
-                          style: TextStyle(color: Colors.black87),
+                          "sign in",
+                          style: TextStyle( fontSize: 32,
+                              color: Colors.white,),
                         ),
                         style: ButtonStyle(
                           // textStyle:
                           //     MaterialStateProperty.all(TextStyle(color: Colors.pink)),
                           backgroundColor:
-                          MaterialStateProperty.all(Colors.lightBlueAccent),
+                          MaterialStateProperty.all(Colors.blue[900],),
                         ),
                       ),
                     ),
