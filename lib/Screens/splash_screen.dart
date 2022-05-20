@@ -1,10 +1,6 @@
 import 'dart:async';
-//import 'dart:js';
-//import 'dart:html';
 import 'package:flutter/material.dart';
-import 'package:home/screens/Login_Screen.dart';
-
-void main() {}
+import 'package:home/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -21,11 +17,11 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigatetohome() async {
-    await Future.delayed(Duration(milliseconds: 4000), () {});
+    await Future.delayed(const Duration(milliseconds: 4000), () {});
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => LoginScreen(),
+        builder: (context) => const LoginScreen(),
       ),
     );
   }
