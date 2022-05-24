@@ -20,6 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        appBarTheme:
+            const AppBarTheme(iconTheme: IconThemeData(color: Colors.black)),
         primarySwatch: Colors.blue,
       ),
       home: const SplashScreen(),
@@ -35,6 +37,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  //Custom widget for BottomBar
   Widget _textButton(String item) {
     return TextButton(
       onPressed: () {},
@@ -109,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         appBar: AppBar(
           elevation: 0.0,
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.white,
           actions: [
             IconButton(
               onPressed: () {
@@ -240,15 +243,59 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
 
-                // ListView(
-                //   children: [
-                //     ListTile(
-                //       title: Text('Fix Microwave'),
-                //       subtitle: Text('Kitchen'),
-                //       leading: Icon(Icons.microwave),
-                //     )
-                //   ],
-                // )
+                Column(
+                  children: [
+                    ListTile(
+                      tileColor: Colors.blue[50],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      leading: Container(
+                        padding: const EdgeInsets.all(7),
+                        decoration: BoxDecoration(
+                          color: Colors.blue[100],
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                        child: const Icon(Icons.microwave,
+                            size: 35, color: Colors.white),
+                      ),
+                      title: const Text('Fix Microwave'),
+                      subtitle: const Text('Kitchen'),
+                      trailing: const Icon(
+                        Icons.navigate_next,
+                        size: 50,
+                        color: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    ListTile(
+                      tileColor: Colors.blue[50],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      leading: Container(
+                        padding: const EdgeInsets.all(7),
+                        decoration: BoxDecoration(
+                          color: Colors.blue[100],
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                        child:
+                            const Icon(Icons.tv, size: 35, color: Colors.white),
+                      ),
+                      title: const Text('Fix TV set'),
+                      subtitle: const Text('Living Room'),
+                      trailing: const Icon(
+                        Icons.navigate_next,
+                        size: 50,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
